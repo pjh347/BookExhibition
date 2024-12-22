@@ -3,8 +3,8 @@ import Main from './Container.js'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 
-const RECOMMEND_URL = `${process.env.REACT_APP_API_URL}/api/books/book/recommended`;
-const WISHED_URL = `${process.env.REACT_APP_API_URL}/api/books/book/wished`;
+const RECOMMEND_URL = `${process.env.REACT_APP_API_URL}/book/recommended`;
+const WISHED_URL = `${process.env.REACT_APP_API_URL}/book/wished`;
 
 const App = () => {
   const [ recommendBooks, setRecommendBooks ] = useState([])
@@ -13,6 +13,7 @@ const App = () => {
   const getRecommendedBooks = async () => {
     try {
       const resRecommend = await axios.get(RECOMMEND_URL)
+      console.log()
       console.log(resRecommend)
 
       setRecommendBooks(resRecommend.data)
