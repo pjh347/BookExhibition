@@ -3,8 +3,8 @@ import Main from './Container.js'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 
-const RECOMMEND_URL = 'http://localhost:8080/api/books/book/recommended'
-const WISHED_URL = 'http://localhost:8080/api/books/book/wished'
+const RECOMMEND_URL = `${process.env.REACT_APP_API_URL}/api/books/book/recommended`;
+const WISHED_URL = `${process.env.REACT_APP_API_URL}/api/books/book/wished`;
 
 const App = () => {
   const [ recommendBooks, setRecommendBooks ] = useState([])
