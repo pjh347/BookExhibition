@@ -125,7 +125,9 @@ const RecommendItem = ({book}) => {
           <a href={`https://library.kumoh.ac.kr/#/total-search?keyword=${book.title}`}>
             <span>
               <img alt={`도서 이미지 ${book.index}`} 
-                src={book.img}/>
+                src={book.img}
+                target='_blank'
+                rel='noreferrer'/>
             </span>
           </a>
         </div>
