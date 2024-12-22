@@ -13,7 +13,6 @@ const App = () => {
   const getRecommendedBooks = async () => {
     try {
       const resRecommend = await axios.get(RECOMMEND_URL)
-      console.log()
       console.log(resRecommend)
 
       setRecommendBooks(resRecommend.data)
